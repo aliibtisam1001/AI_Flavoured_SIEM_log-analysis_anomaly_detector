@@ -1,0 +1,4 @@
+pandas          # For data handling 
+numpy           # For numerical operations
+scikit-learn    # For anomaly detection using isolationforest
+matplotlib      # For graphical plotting   

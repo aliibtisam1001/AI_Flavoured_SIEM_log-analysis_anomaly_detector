@@ -1,0 +1,54 @@
+timestamp,level,message,user
+2025-03-06 08:00:00,INFO,User login success,admin
+2025-03-06 08:01:23,INFO,User login success,alice
+2025-03-06 08:02:45,ERROR,Failed login attempt,alice
+2025-03-06 08:03:10,INFO,User login success,bob
+2025-03-06 08:04:00,INFO,User login success,admin
+2025-03-06 08:05:15,ERROR,Failed login attempt,charlie
+2025-03-06 08:05:16,ERROR,Failed login attempt,charlie
+2025-03-06 08:05:17,ERROR,Failed login attempt,charlie
+2025-03-06 08:05:18,INFO,User login success,charlie  # Anomaly: Success after rapid failures (possible brute force success)
+2025-03-06 08:06:20,INFO,User login success,alice
+2025-03-06 08:07:30,ERROR,Failed login attempt,unknown_user  # Anomaly: Unknown user attempting login
+2025-03-06 08:08:00,INFO,User login success,bob
+2025-03-06 08:09:10,ERROR,Failed login attempt,alice
+2025-03-06 08:10:00,INFO,User login success,admin
+2025-03-06 08:11:23,ERROR,Failed login attempt,charlie
+2025-03-06 08:11:24,ERROR,Failed login attempt,charlie
+2025-03-06 08:11:25,ERROR,Failed login attempt,charlie
+2025-03-06 08:11:26,INFO,User login success,charlie  # Anomaly: Another rapid success after failures
+2025-03-06 08:12:45,INFO,User login success,alice
+2025-03-06 08:13:00,ERROR,Failed login attempt,admin
+2025-03-06 08:13:01,ERROR,Failed login attempt,admin
+2025-03-06 08:13:02,ERROR,Failed login attempt,admin  # Anomaly: Unusual repeated failures for admin
+2025-03-06 08:14:15,INFO,User login success,bob
+2025-03-06 08:15:00,ERROR,Failed login attempt,unknown_user  # Anomaly: Unknown user again
+2025-03-06 08:16:20,INFO,User login success,admin
+2025-03-06 08:17:30,ERROR,Failed login attempt,alice
+2025-03-06 08:18:00,INFO,User login success,bob
+2025-03-06 08:19:10,ERROR,Failed login attempt,charlie
+2025-03-06 08:20:00,INFO,User login success,alice
+2025-03-06 08:21:23,INFO,User login success,root  # Anomaly: Unexpected "root" user login
+2025-03-06 08:22:45,INFO,User login success,admin
+2025-03-06 08:23:00,ERROR,Failed login attempt,charlie
+2025-03-06 08:24:15,INFO,User login success,bob
+2025-03-06 08:25:00,INFO,User login success,alice
+2025-03-06 08:26:10,ERROR,Failed login attempt,charlie
+2025-03-06 08:27:00,INFO,User login success,admin
+2025-03-06 08:28:20,ERROR,Failed login attempt,alice
+2025-03-06 08:29:00,INFO,User login success,bob
+2025-03-06 08:30:00,INFO,User login success,alice
+2025-03-06 08:31:15,ERROR,Failed login attempt,charlie
+2025-03-06 08:32:00,INFO,User login success,admin
+2025-03-06 08:33:45,ERROR,Failed login attempt,unknown_user  # Anomaly: Unknown user persists
+2025-03-06 08:34:00,INFO,User login success,bob
+2025-03-06 08:35:10,ERROR,Failed login attempt,alice
+2025-03-06 08:36:00,INFO,User login success,admin
+2025-03-06 08:37:20,ERROR,Failed login attempt,charlie
+2025-03-06 08:38:00,INFO,User login success,alice
+2025-03-06 08:39:00,INFO,User login success,bob
+2025-03-06 08:40:00,ERROR,Failed login attempt,root  # Anomaly: Failed attempt by "root" after success
+2025-03-06 08:41:15,INFO,User login success,admin
+2025-03-06 08:42:30,ERROR,Failed login attempt,alice
+2025-03-06 08:43:00,INFO,User login success,bob
+2025-03-06 08:44:00,INFO,User login success,alice
